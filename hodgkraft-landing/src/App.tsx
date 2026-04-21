@@ -61,6 +61,7 @@ function App() {
 
         <div id="fineprint">
           <p>Hodgkraft Server is not associated with Mojang Studios, Microsoft, and/or any of its affiliates. Don't sue us, thanks!</p>
+          <p>Server and landing page made by <a href="https://github.com/gamer0kayf1n3">gamer0kayf1n3</a> and co-hosted with <a href="https://github.com/BermudaVI">TheSnobol</a> with ♥</p>
         </div>
       </div>
     </>
