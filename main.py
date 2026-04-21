@@ -7,4 +7,9 @@ def main():
 @app.route("/landing/<path:file>")
 def files(file):
     return send_from_directory(PATH, file)
+
+
+@app.route("/robots.txt")
+def robotstxt():
+    return send_from_directory("/home/ubuntu/landing", "robots.txt")
 app.run(host="0.0.0.0", port=8080)
