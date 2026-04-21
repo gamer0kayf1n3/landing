@@ -1,184 +1,125 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+* {
+  font-family: 'Lexend Deca', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
-
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
+body {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(15, 28, 70);
+}
+
+#header {
+  height: 10vh;
   display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: rgba(91, 25, 153,0.253);
+  box-shadow: 0 0 25px 25px rgba(91, 25, 153, 0.253);
+  align-items: center;
+  position: sticky;
+  top: 0;
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+#header > * {
+  display: block;
+}
+button {
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 100ms;
+  border-radius: 40px;
+  corner-shape: squircle;
+}
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.5);
+}
+button:active {
+  filter: brightness(0.8);
 }
 
-.ticks {
-  position: relative;
-  width: 100%;
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
+#header-logo {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+  display: inline-block;
+  color: white;
+  font-size: 24pt;
+}
+
+#hero {
+  padding: 100px 50px;
+}
+
+#hero > * {
+  padding: 0;
+  margin: 0;
+}
+
+#hero-text-1 {
+  font-size: 72px;
+  font-family: "Changa One", sans-serif;
+
+}
+#hero-text-2 {
+  font-size: 32px;
+  font-family: "Changa One", sans-serif;
+  font-weight: 200;
+
+}
+
+#fineprint * {
+  color:lightgray;
+  font-size: 12px;
+  text-align: center;
+}
+
+#server > p {
+  padding: 0;
+  margin: 0;
+}
+#server {
+  text-align: center;
+  padding: 50px 75px;
+  background-color: rgba(155, 170, 255, 0.164);
+}
+
+#server-inv {
+  font-size: 32px;
+}
+#server-px {
+  font-size: 12px;
+}
+input {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  border: 3px inset white;
+  padding: 10px !important;
+  font-size: 24px;
+
+}
+
+#servercopier {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+#vers > button {
+  margin: 5px;
+  font-weight: 400;
+  font-size: 18px;
+}
+#footer {
+  margin: 10px;
 }
