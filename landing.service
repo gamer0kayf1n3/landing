@@ -1,0 +1,13 @@
+[Unit]
+Description=Landing Page
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/landing
+ExecStart=/usr/bin/python3 /home/ubuntu/landing/main.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
