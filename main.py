@@ -9,7 +9,10 @@ def main():
 
 @app.route("/<path:file>")
 def files(file):
-    return send_from_directory(PATH, file)
+    try:
+        return send_from_directory(PATH, file)
+    except:
+        return send_from_directory(PATH, "index.html")
 
 @app.route("/robots.txt")
 def robotstxt():
