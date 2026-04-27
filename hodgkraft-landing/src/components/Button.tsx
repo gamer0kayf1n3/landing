@@ -5,7 +5,7 @@ function Button({bg, color, title, fn, href}: {bg: string, color: string, title:
         color: color,
     }
     if (href) {
-        fn = () => window.location.assign("/panel/dashboard");
+        fn = () => window.location.assign(href);
     }
   return (
     <button style={style} onClick={fn}>{title}</button>
