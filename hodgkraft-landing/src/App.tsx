@@ -30,7 +30,7 @@ function App() {
     <>
       <div id="header">
         <span id="header-logo">Hodgkraft Server</span>
-        <Button color="white" bg="darkblue" title="Sign In" href="/panel/dashboard" />
+        <Button color="white" bg="darkblue" title="Sign In" href="https://crafty.hodgkraft.duckdns.org" />
       </div>
 
       <div id="hero">
