@@ -1,0 +1,21 @@
+from flask import Flask, send_from_directory
+
+app = Flask(__name__)
+PATH = "/home/ubuntu/landing/resources/dist"
+
+@app.route("/")
+def main():
+    return send_from_directory(PATH, "index.html")
+
+@app.route("/<path:file>")
+def files(file):
+    try:
+        return send_from_directory(PATH, file)
+    except:
+        return send_from_directory(PATH, "index.html")
+
+@app.route("/robots.txt")
+def robotstxt():
+    return send_from_directory("/home/ubuntu/landing", "robots.txt")
+
+app.run(host="0.0.0.0", port=8081)
