@@ -1,0 +1,110 @@
+:global(:root) {
+    --gradient-start: rgba(91, 25, 123, 0.52);
+    --gradient-end: rgba(58, 10, 90, 0.05);
+}
+
+.heroCardContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.heroCard {
+    width: 70%;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;  
+}
+
+.divider {
+    margin: 1rem 0;
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@supports (corner-shape: squircle) {
+    .heroCard {
+        corner-shape: squircle;
+        border-radius: 36px;
+    }
+}
+
+.section3 {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.section3>* {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.section3>*>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section3>*:not(:last-child) {
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.playerCountNumber,
+.regionFlag {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.playerCountText, .regionText, .onlineStatusText {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+}
+.playerCountTextSub, .regionTextSub, .onlineStatusTextSub {
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.onlineStatusIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+.onlineStatusCircle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background-color: rgb(0, 187, 25);
+}
+
+.heroCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.15) 0%,
+        transparent 50%
+    );
+    pointer-events: none;
+}

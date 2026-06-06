@@ -1,0 +1,11 @@
+.minecraftInput {
+    all: unset;
+    border: 2px solid white;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    padding: 8px 12px;
+    font-family: 'Minecraftia', sans-serif;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.25);
+    flex: 1;
+}

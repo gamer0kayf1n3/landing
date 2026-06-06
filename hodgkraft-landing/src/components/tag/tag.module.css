@@ -1,0 +1,39 @@
+.tag {
+    display: flex;
+    background-color: #213a2c;
+    border-radius: 100px;
+    padding: 2px 6px;
+    margin: 0 2px;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.1);
+    transition: filter 0.1s ease, transform 0.1s ease;
+}
+
+.tag:hover {
+    filter: brightness(1.05) saturate(1.05);
+    transform: scale(1.05);
+}
+
+.tag:active {
+    transform: scale(1);
+    filter: brightness(0.952) saturate(0.952);
+}
+.tag span {
+    font-size: 12px;
+    font-weight: light;
+}
+
+.tag .logoContainer {
+    height: 14px;
+    width: 14px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.tag .logoContainer img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
