@@ -6,8 +6,11 @@ import MinecraftButton from "../minecraft-button/minecraft-button"
 import TagList from "../tag-list/tag-list"
 import Tag from "../tag/tag"
 
+import { ToastContext } from '../../App'
+
 import { motion } from "motion/react"
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext, useRef } from 'react'
+import { input } from 'motion/react-client'
 
 const imageModules = import.meta.glob('../../assets/logos/*', { eager: true })
 const logos: Record<string, string> = Object.fromEntries(
@@ -19,6 +22,10 @@ const logos: Record<string, string> = Object.fromEntries(
 function HeroCard() {
     const [online, setOnline] = useState(null);
     const [players, setPlayers] = useState(null);
+
+    const toast = useContext(ToastContext)
+
+    const inputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         const fetchStatus = async () => {
@@ -49,8 +56,12 @@ function HeroCard() {
         <section className={styles.heroCardContainer}>
             <div className={styles.heroCard}>
                 <div className={styles.section1}>
-                    <MinecraftInput defaultText="hodgkraft.duckdns.org" disabled={true} />
-                    <MinecraftButton label="Copy" onClick={() => { }} />
+                    <MinecraftInput defaultText="hodgkraft.duckdns.org" disabled={true} ref={inputRef} />
+                    <MinecraftButton label="Copy" onClick={() => {
+                        inputRef.current?.select()
+                        navigator.clipboard.writeText(inputRef.current?.value ?? "")
+                        toast("Copied to clipboard.")
+                    }} />
                 </div>
                 <hr className={styles.divider} />
                 <div className={styles.section2}>
