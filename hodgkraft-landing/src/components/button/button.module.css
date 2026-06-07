@@ -1,0 +1,44 @@
+.btn {
+    all: unset;
+    padding: 12px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px 0 rgba(0,0,0,0.3);
+    transition: transform 100ms ease, filter 100ms ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+.btn:active {
+    transform: scale(1);
+    filter: brightness(0.90);
+}
+
+.btn span {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.btn div {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn div img {
+    display: block;
+}
+
+@supports (corner-shape: squircle) {
+    .btn {
+        corner-shape: squircle;
+        border-radius: 36px;
+    }
+}
