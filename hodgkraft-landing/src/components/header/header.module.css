@@ -36,8 +36,15 @@
   color: var(--text-color);
   position: relative;
   text-decoration: none;
-  transition: background-color 200ms ease;
+  transition: background-color 200ms ease, opacity 200ms ease;
+  opacity: 90%;
 }
+
+.navLinks ul li:hover {
+  opacity: 100%;
+}
+
+
 
 .navLinks ul li::after {
   content: '';
@@ -51,7 +58,7 @@
 }
 
 .navLinks ul li:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .navFullContainer {
@@ -61,6 +68,11 @@
   width: 100%;
   top: 0;
   z-index: 1000;
+}
+
+.navLinks a:link, .navLinks a:visited, .navLinks a:hover, .navLinks a:active {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 @media screen and (min-width: 768px) {

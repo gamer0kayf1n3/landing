@@ -13,10 +13,10 @@ function Header() {
                 </div>
                 <div className={styles.navLinks}>
                     <ul>
-                        <li>Home</li>
-                        <li>Gamemodes</li>
-                        <li>Discord</li>
-                        <li>Support</li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gamemodes">Gamemodes</a></li>
+                        <li><a href="#discord">Discord</a></li>
+                        <li><a href="/support">Support</a></li>
                     </ul>
                 </div>
             </div>
