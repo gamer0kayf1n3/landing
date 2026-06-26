@@ -6,7 +6,7 @@ import swordIcon from "../../assets/gamemodes/Diamond_Sword_JE3_BE3.png"
 
 function Gamemodes() {
     return (
-        <div className={styles.gamemodesContainer}>
+        <div className={styles.gamemodesContainer} id="gamemodes">
             <div className={styles.gamemodes}>
                 <p>Hodgkraft offers 3 fun gamemodes:</p>
                 <div className={styles.gameSel}>
