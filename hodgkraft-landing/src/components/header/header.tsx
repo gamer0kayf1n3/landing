@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import logo from '../../assets/images/logo.png';
 
 import styles from './header.module.css'

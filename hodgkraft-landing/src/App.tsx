@@ -1,5 +1,5 @@
 import './App.css'
-import { createContext, useContext, useState } from 'react'
+import { createContext, useState } from 'react'
 
 import Header from './components/header/header.tsx'
 import Hero from './components/hero/hero.tsx'

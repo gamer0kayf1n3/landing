@@ -19,8 +19,8 @@ const logos: Record<string, string> = Object.fromEntries(
     ])
 )
 function HeroCard() {
-    const [online, setOnline] = useState(null);
-    const [players, setPlayers] = useState(null);
+    const [online, setOnline] = useState<boolean | null>(null);
+    const [players, setPlayers] = useState<number | null>(null);
 
     const toast = useContext(ToastContext)
 
@@ -39,7 +39,7 @@ function HeroCard() {
                 try {
                     const res = await fetch('https://crafty.hodgkraft.duckdns.org/api/v2/servers/status')
                     const data = await res.json()
-                    const velocity = data.data.find(s => s.world_name === "Velocity Server")
+                    const velocity = data.data.find((s: any) => s.world_name === "Velocity Server")
                     setOnline(velocity?.running ?? false)
                     setPlayers(velocity?.online ?? 0)
                 } catch {
