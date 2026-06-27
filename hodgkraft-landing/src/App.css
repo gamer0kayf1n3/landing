@@ -27,4 +27,7 @@ html {
 
 hr {
   width: 95%;
+  border: none;
+  border-top: 2px solid #ffffff6c;
+  height: 0px;
 }

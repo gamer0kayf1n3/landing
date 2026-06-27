@@ -1,6 +1,7 @@
 .discord {
     text-align: center;
     margin: 10px auto;
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -94,4 +94,13 @@
         display: flex;
         flex-direction: column;
     }
+
+    .gameSel .scaleHover:hover {
+        transform: unset;
+        box-shadow: unset;
+    }
+
+    .gameSel>div:not(:last-child) {
+        border-right: unset;
+    }
 }

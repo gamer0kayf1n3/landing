@@ -26,7 +26,6 @@ function App() {
       <Gamemodes />
       <hr />
       <Discord />
-      <hr />
       <Footer />
       <Toast message={toastMessage} show={showToast} />
     </ToastContext.Provider>

@@ -14,21 +14,21 @@ function Gamemodes() {
                         <div className={styles.scaleHover}>
                             <img src={swordIcon} alt="Diamond sword" />
                             <span className={styles.leadText}>Hodgkraft SMP (Survival Multiplayer)</span>
-                            <span className={styles.subText}>Insert subtext here.</span>
+                            <span className={styles.subText}>Survive, explore, and build together.</span>
                         </div>
                     </div>
                     <div>
                         <div className={styles.scaleHover}>
                             <img src={grassBlockIcon} alt="Grass block" />
                             <span className={styles.leadText}>Hodgkraft Creatives</span>
-                            <span className={styles.subText}>Insert subtext here.</span>
+                            <span className={styles.subText}>Build whatever your heart desires.</span>
                         </div>
                     </div>
                     <div>
                         <div className={styles.scaleHover}>
                             <img src={witherSkeletonIcon} alt="Wither Skeleton head" />
                             <span className={styles.leadText}>Hodgkraft Season 1 Archive</span>
-                            <span className={styles.subText}>Insert subtext here.</span>
+                            <span className={styles.subText}>See the world where the server was born.</span>
                         </div>
                     </div>
                 </div>
