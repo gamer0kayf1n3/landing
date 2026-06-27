@@ -10,7 +10,6 @@ import { ToastContext } from '../../App'
 
 import { motion } from "motion/react"
 import { useEffect, useState, useContext, useRef } from 'react'
-import { input } from 'motion/react-client'
 
 const imageModules = import.meta.glob('../../assets/logos/*', { eager: true })
 const logos: Record<string, string> = Object.fromEntries(

@@ -6,6 +6,7 @@ import Hero from './components/hero/hero.tsx'
 import Gamemodes from './components/gamemodes/gamemodes.tsx'
 import Toast from './components/toast/toast.tsx'
 import Discord from './components/discord/discord.tsx'
+import Footer from './components/footer/footer.tsx'
 export const ToastContext = createContext<(msg: string) => void>(() => {})
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
       <Gamemodes />
       <hr />
       <Discord />
+      <hr />
+      <Footer />
       <Toast message={toastMessage} show={showToast} />
     </ToastContext.Provider>
   )
